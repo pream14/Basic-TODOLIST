@@ -1,0 +1,49 @@
+#heading{
+    display: inline-flex;
+    font-size:60px;
+    color:rgba(178, 72, 72, 0.3);
+    
+}
+
+#inputs{
+    background: #fff;
+	margin: 130px  5opx 0;
+    height: 50px;
+    width: 300px;
+	position: relative;
+    margin-left: 5%;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+#inputs::placeholder{
+    font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+   
+}
+
+button{
+    cursor: pointer;
+}
+
+
+table {
+    width: 25%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+input[type="checkbox"] {
+    transform: scale(1.5); 
+    cursor: pointer;
+}
+#box{
+    size: 1000px;
+}
+body{
+    background-color: rgba(171, 154, 154,0.2);
+    
+}

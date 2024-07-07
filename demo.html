@@ -1,0 +1,71 @@
+<script>
+    
+    function save(){
+        var b=document.getElementById("inputs")
+        var n=document.getElementById("warning")
+        warning.textContent=""
+        if (b.value!==""){
+            var a=document.getElementById("table")
+            var c=document.createElement("tr")
+            var d=document.createElement("td")
+            d.textContent=b.value
+            var e=document.createElement("td")
+            var f=document.createElement("input")
+            f.setAttribute("type", "checkbox");
+            f.setAttribute("id","box")
+            f.onclick = delet;
+            e.appendChild(f)
+            c.appendChild(d)
+            c.appendChild(e)
+            a.appendChild(c)
+            b.value=""
+        
+    }
+    else{
+        var d=document.createElement("div")
+        d.textContent="give input"
+        d.style.color="red"
+        n.append(d)
+    }
+}
+    function delet(event){
+        event.target.parentElement.parentElement.remove();
+    }
+    function Key(event){
+        if(event.keyCode==13){
+            save()
+        }
+    }
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1 id="heading" >to do list</h1> <br>
+    
+    <input id="inputs"  placeholder="What's need to be done..." onkeydown="Key(event)" >
+    
+    
+    <div id="option"></div>
+    <div id="warning"></div>
+    
+    </center>
+
+    <table>
+         <tbody id="table" style="font-size: 200%">
+        </tbody>
+    </table>
+
+
+</body>
+</html>
